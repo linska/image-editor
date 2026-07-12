@@ -2,6 +2,10 @@
 
 A simple browser-based image editor built with Vue 3.
 
+## Live Demo
+
+https://image-editor-linska.netlify.app/
+
 ## Features
 
 - Upload image
