@@ -1,0 +1,5 @@
+@use "vuetify/settings" with (
+  $font-size-root: 14px,
+  $button-text-letter-spacing: 1px,
+  $button-font-weight: 600,
+);
