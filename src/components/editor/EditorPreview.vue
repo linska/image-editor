@@ -9,7 +9,7 @@ const editorStore = useEditorStore();
 const { originalUrl, isCropping, croppedPreviewUrl, previewFilter } =
   storeToRefs(editorStore);
 
-const { workspace, cropperContainer, frameStyle, getCropResult } =
+const { frameStyle, getCropResult } =
   useImageCropper({
     sourceUrl: originalUrl,
     isCropping,
@@ -32,10 +32,10 @@ defineExpose({
 </script>
 
 <template>
-  <div ref="workspace" class="image-preview">
+  <div ref="imageCropper.workspace" class="image-preview">
     <div
       v-if="isCropping"
-      ref="cropperContainer"
+      ref="imageCropper.cropperContainer"
       class="image-preview__cropper"
       :style="frameStyle"
     />
