@@ -40,13 +40,22 @@ defineExpose({
       :style="frameStyle"
     />
 
-    <img
+    <v-img
       v-else-if="originalUrl"
       :src="croppedPreviewUrl || originalUrl"
       alt="Edited image preview"
       class="image-preview__image"
       :style="previewFilter"
-    />
+    >
+      <template #placeholder>
+        <div class="d-flex align-center justify-center fill-height">
+          <v-progress-circular
+            color="grey-lighten-4"
+            indeterminate
+          ></v-progress-circular>
+        </div>
+      </template>
+    </v-img>
   </div>
 </template>
 
